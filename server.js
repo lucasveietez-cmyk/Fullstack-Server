@@ -4,10 +4,9 @@ const name = "Lucas"
 
 console.log(fs)
 
-server = http.createServer((rec, res) => {
-    console.log(req)
+server = http.createServer((req, res) => {
     file = fs.readFileSync("./index.html", "utf-8")
-    file = file.replace("{{mudar}}", name)
+    file = file.replace("dados aqui", name)
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(file)
 
