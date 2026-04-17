@@ -1,0 +1,16 @@
+<input placeholder="Digite seu CEP:" type="text">
+<button onclick=buscarCep()>Buscar</button>
+<div>dados aqui</div>
+
+<script src="lib-nr.js"></script>
+
+<script>
+
+    async function buscarCep() {
+        const cep = document.querySelector("input").value
+        const dados = await getCep(cep)
+        console.log("cep aqui", dados)
+
+    }
+
+</script>
